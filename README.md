@@ -24,6 +24,7 @@ RUN below commands
   [SPRING INITIALIZR]: <https://start.spring.io/>
 * Head over to [SPRING INITIALIZR] and generate project with your <b>Project Metadata</b> and <b>Dependencies</b>. Later unzip and move the package to your workspace.
 * Run ``` $ yo fountain-webapp``` in the package.
-* Run ``` $ npm i -g glup-cli``` 
-* Change ```  dist:'dist' ``` in conf/gulp.conf.js to  ```  dist: 'src/main/resources/static/'```
-*  Run ```  $ gulp:build``` followed by ``` $ mvn spring-boot:run```(alternative: run in spring tool suite as Spring Boot App)
+* Run ``` $ npm i -g glup-cli```. 
+* Change ```  dist:'dist' ``` in conf/gulp.conf.js to  ```  dist: 'src/main/resources/static/'```(for ease copy from here).
+* Add ```path.join(`!${conf.paths.src}`, '/main/**/*')``` in gulp_tasks/misc.js (for ease copy from here).
+*  Run ```  $ gulp:build``` followed by ``` $ mvn spring-boot:run```(alternative: run in spring tool suite as Spring Boot App).
